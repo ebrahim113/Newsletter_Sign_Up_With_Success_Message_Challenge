@@ -1,0 +1,188 @@
+:root {
+    --red: hsl(4, 100%, 67%);
+    --blue-700: hsl(235, 18%, 26%);
+    --blue-800: hsl(234, 29%, 20%);
+    --grey: hsl(0, 0%, 58%);
+    --font-family: "Roboto", sans-serif;
+    --font-weight-400: 400;
+    --font-weight-700: 700;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue-700);
+    font-family: var(--font-family);
+}
+
+.newsletter {
+    display: flex;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.newsletter .content {
+    padding: 0 40px;
+    width: 500px;
+}
+
+.newsletter .content .head h1 {
+    color: var(--blue-800);
+    font-weight: var(--font-weight-700);
+    font-size: 50px;
+}
+
+.newsletter .content .head p {
+    color: var(--blue-800);
+    font-weight: var(--font-weight-400);
+}
+
+.newsletter .content .head ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.newsletter .content .head ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: var(--blue-700);
+    font-weight: var(--font-weight-700);
+}
+
+.newsletter .content .head ul li img {
+    margin-right: 20px;
+}
+
+.newsletter .content form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.newsletter .content form p {
+    position: absolute;
+    right: 0;
+    top: -20px;
+    color: var(--red);
+    font-weight: var(--font-weight-700);
+    display: none;
+}
+
+.newsletter .content form label {
+    margin-bottom: 10px;
+    color: var(--blue-800);
+    font-weight: var(--font-weight-700);
+}
+
+.newsletter .content form input {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.newsletter .content form input[type="email"] {
+    border: 1px solid var(--grey);
+    color: var(--blue-700);
+    font-weight: var(--font-weight-400);
+}
+
+.newsletter .content form input[type="email"]:focus {
+    outline: 1px solid var(--blue-700);
+    border: none;
+}
+
+.newsletter .content form input[type="submit"] {
+    color: white;
+    background-color: var(--blue-700);
+    cursor: pointer;
+    font-weight: var(--font-weight-700);
+}
+
+.newsletter .content form input[type="submit"]:hover {
+    background-color: var(--red);
+    border-color: var(--red);
+    background-color: var(--red);
+    border: 1px solid var(--red);
+    box-shadow: 5px 5px 15px 0px var(--red);
+}
+
+.newsletter .image {
+    max-width: 100%;
+}
+
+.newsletter .image img:nth-child(2) {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .newsletter {
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    .newsletter .image img {
+        width: 100%;
+    }
+
+    .newsletter .content .head h1 {
+        font-size: 40px;
+    }
+
+    .newsletter .content {
+        width: 100%;
+    }
+
+    .newsletter .image img:nth-child(1) {
+        display: none;
+    }
+
+    .newsletter .image img:nth-child(2) {
+        display: block;
+    }
+}
+
+.success {
+    display: none;
+    background-color: white;
+    border-radius: 10px;
+    width: 350px;
+    padding: 30px;
+}
+
+
+@media (max-width: 767px) {
+    .success {
+        height: 100%;
+    }
+}
+
+.success button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--red);
+    border: none;
+    border-radius: 5px;
+    font-weight: var(--font-weight-700);
+    color: white;
+}
+
+.success button:hover {
+    cursor: pointer;
+    background-color: var(--red);
+    border-color: var(--red);
+    background-color: var(--red);
+    border: 1px solid var(--red);
+    box-shadow: 5px 5px 15px 0px var(--red);
+}
